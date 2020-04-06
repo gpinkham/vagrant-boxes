@@ -47,7 +47,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_check_update = false
   
   # change memory size
-  config.vm.provider "virtualbox" do |v|
+  config.vm.provider "parallels" do |v|
     v.memory = 2048
     v.name = NAME
     v.customize ["modifyvm", :id, "--vram", "128"]
